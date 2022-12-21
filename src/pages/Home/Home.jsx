@@ -1,9 +1,15 @@
-export const Home = () => {
+import "./Home.css";
+
+const Home = () => {
     return (
-        <div>
-            <div>
-                Teste Home
-            </div>
-        </div>
+        <>
+            <section>
+                <div>
+                    Página principal
+                </div>
+            </section>
+        </>
     );
 };
+
+export default Home;

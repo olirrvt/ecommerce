@@ -1,4 +1,4 @@
-export const Produtos = () => {
+const Produtos = () => {
     return (
         <div>
             <div>
@@ -7,3 +7,6 @@ export const Produtos = () => {
         </div>
     );
 };
+
+
+export default Produtos;
