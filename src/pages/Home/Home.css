@@ -1,5 +1,4 @@
-.teste {
-    background: #0000;
-    color: #fff;
-    text-align: center;
+.banner-principal {
+    display: flex;
+    justify-content: center;
 }

@@ -1,0 +1,35 @@
+.container-banner {
+    display: flex;
+    justify-content: center;
+    margin: 2.5rem 0 0 0;
+    padding: 2.8rem;
+    background: #0C0C0C;
+    width: 55%;
+}
+
+.titulo-banner-escrito {
+    font-family: "Segoe UI" , "Fira Sans", "Helvetica Neue", Arial, sans-serif;
+    color: #e7e7e7;
+}
+
+.conteudo-escrito-descricao {
+    font-family: "Segoe UI" , "Fira Sans", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 500;
+    margin: 0 0 2rem 0;
+    color: #e7e7e7;
+}
+
+.btn-comprar {
+    border: none;
+    background: #e03213;
+    color: #fff;
+    font-weight: 700;
+    font-family: "Segoe UI";
+    border-radius: 6px;
+    padding: 0.5rem;
+}
+
+.produto-banner {
+    height: 40vh;
+    width: 45ch;
+}

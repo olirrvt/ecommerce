@@ -1,20 +1,25 @@
 import "./Home.css";
 import Cabecalho from "../../components/Header/Cabecalho";
+import Banner from "../../components/Banner/Banner";
 
 const Home = () => {
-    return (
-        <div className="conteudo">  
+  return (
+    <div className="conteudo">
 
-            <Cabecalho/>
+      <header>
+        <Cabecalho />
+      </header>
 
-            <section>
-                <div>
-                    Página principal
-                </div>
-            </section>
-
+        <div className="banner-principal">
+          <Banner />       
         </div>
-    );
+
+      <section>
+        <div>Página principal</div>
+      </section>
+
+    </div>
+  );
 };
 
 export default Home;
