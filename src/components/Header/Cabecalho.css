@@ -3,10 +3,10 @@
     justify-content: space-around;
     align-items: baseline;
     flex-direction: row;
-    /* background: #131414; */
+    /* background: #0C0C0C; */
     color: #fff;
     margin: -0.4rem 0 0 0;
-    padding: 1rem;
+    padding: 2.2rem;
 }
 
 .container-logo {
