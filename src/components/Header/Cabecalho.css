@@ -1,12 +1,14 @@
 .container-caixa-header {
-    display: flex;
-    justify-content: space-around;
-    align-items: baseline;
-    flex-direction: row;
     /* background: #0C0C0C; */
     color: #fff;
     margin: -0.4rem 0 0 0;
     padding: 2.2rem;
+}
+
+.container-header-principal {
+    display: flex;
+    flex-direction: row;
+    gap: 22rem;
 }
 
 .container-logo {
@@ -30,6 +32,7 @@
 
 .container-pesquisar {
     display: flex;
+    margin: 1rem 0 0 0;
 }
 
 .input-pesquisar-header {

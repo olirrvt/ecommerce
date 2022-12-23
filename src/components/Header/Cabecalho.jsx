@@ -1,11 +1,14 @@
 import "./Cabecalho.css";
 import logo from "../../assets/desenvolvedor.png";
 import lupa from "../../assets/pesquisa-de-lupa.png";
+import Nav from "../Nav/Nav";
 
 const Cabecalho = () => {
   return (
-      <div className="container-caixa-header">
+    
+    <div className="container-caixa-header">
 
+      <div className="container-header-principal">
         <div className="container-logo">
           <h2 className="titulo-header">TechCommerce</h2>
           <img src={logo} alt="logo-da-pagina" className="logo-da-pagina" />
@@ -26,8 +29,14 @@ const Cabecalho = () => {
           <button className="btn-login">Sign In</button>
           <button className="btn-cadastrar">Sign Up</button>
         </div>
-  
       </div>
+
+      <div>
+          <Nav />
+      </div>
+
+    </div>
+    
   );
 };
 
