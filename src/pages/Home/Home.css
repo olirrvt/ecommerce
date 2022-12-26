@@ -1,4 +1,21 @@
 .banner-principal {
     display: flex;
     justify-content: center;
+    margin: 0 0 7rem 0;
+}
+
+.container-card {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin: 5rem 0 0 0;
+}
+
+.card-container-principal {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin: 5rem 0 0 0;
 }

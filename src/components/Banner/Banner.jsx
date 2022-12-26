@@ -8,7 +8,7 @@ const Banner = () => {
             <div className="container-conteudo-escrito">
                 <h1 className="titulo-banner-escrito">Tecnologia para sua <br></br> comodidade</h1>
                 <div className="conteudo-escrito-descricao">
-                    Para o seu trabalho, estudo ou trabalho doméstico, <br></br> tudo o que você precisa está aqui
+                    Para o seu conforto, estudo ou trabalho doméstico, <br></br> tudo o que você precisa está aqui
                 </div>
                 <button className="btn-comprar">Comprar agora</button>
             </div>

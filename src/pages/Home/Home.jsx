@@ -1,22 +1,39 @@
 import "./Home.css";
 import Cabecalho from "../../components/Header/Cabecalho";
 import Banner from "../../components/Banner/Banner";
+import Card from "../../components/Card/Card";
 
 const Home = () => {
   return (
-    <div className="conteudo">
+    <div className="conteudo">~
 
       <header>
         <Cabecalho />
       </header>
 
-        <div className="banner-principal">
-          <Banner />       
+      <section className="banner-principal">
+        <Banner />
+      </section>
+
+      <main>
+
+        <div className="container-card">
+            <Card />
+            <Card />
+            <Card />
         </div>
 
-      <section>
-        <div>Página principal</div>
-      </section>
+        <div className="container-card">
+            <Card />
+            <Card />
+            <Card />
+        </div>
+
+      </main>
+
+      <footer>
+        <h1>Footer</h1>
+      </footer>
 
     </div>
   );

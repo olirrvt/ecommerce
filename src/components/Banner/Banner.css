@@ -27,6 +27,13 @@
     font-family: "Segoe UI";
     border-radius: 6px;
     padding: 0.5rem;
+    cursor: pointer;
+    transition: all 450ms ease-in-out;
+}
+
+.btn-comprar:hover {
+    background-color: #de4c32;
+    transition: all 450ms ease-in-out;
 }
 
 .produto-banner {
