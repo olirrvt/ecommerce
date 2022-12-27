@@ -2,14 +2,13 @@ import "./Home.css";
 import Cabecalho from "../../components/Header/Cabecalho";
 import Banner from "../../components/Banner/Banner";
 import Card from "../../components/Card/Card";
+import Footer from "../../components/Footer/Footer";
 
 const Home = () => {
   return (
     <div className="conteudo">~
 
-      <header>
-        <Cabecalho />
-      </header>
+      <Cabecalho />
 
       <section className="banner-principal">
         <Banner />
@@ -31,9 +30,7 @@ const Home = () => {
 
       </main>
 
-      <footer>
-        <h1>Footer</h1>
-      </footer>
+      <Footer/>
 
     </div>
   );
