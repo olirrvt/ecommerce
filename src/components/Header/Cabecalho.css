@@ -8,7 +8,7 @@
 .container-header-principal {
     display: flex;
     flex-direction: row;
-    gap: 22rem;
+    gap: 15rem;
 }
 
 .container-logo {

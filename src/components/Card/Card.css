@@ -26,13 +26,30 @@
 
 .btn-card-carrinho {
     background-color: #545C66;
-    border: none;
-    border-radius: 4px;
-    padding: 0.5rem;
+    transition: all 450ms ease-in;
+}
+
+.btn-card-carrinho:hover {
+    background-color: #696e74;
+    transition: all 450ms ease-in;
 }
 
 .btn-card-comprar {
     background-color: #dc1e1e;
+    transition: all 450ms ease;
+}
+
+.btn-card-comprar:hover {
+    background-color: #008000;
+    transition: all 450ms ease;
+}
+
+.btn-card-carrinho, 
+.btn-card-comprar {
+    font-weight: 700;
+    font-family: "Segoe UI" , "Fira Sans", "Helvetica Neue", Arial, sans-serif;
+    cursor: pointer;
+    color: #fff;
     border: none;
     border-radius: 4px;
     padding: 0.5rem;

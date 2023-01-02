@@ -1,9 +1,9 @@
 .container-banner {
     display: flex;
     justify-content: center;
-    margin: 2.5rem 0 0 0;
+    margin: 4.3rem 0 0 0;
     padding: 2.8rem;
-    background: #0C0C0C;
+    background: #0a0a0a;
     width: 55%;
 }
 
