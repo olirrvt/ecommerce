@@ -8,7 +8,7 @@
 .container-header-principal {
     display: flex;
     flex-direction: row;
-    gap: 15rem;
+    justify-content: space-around;
 }
 
 .container-logo {
@@ -39,8 +39,9 @@
     width: 25rem;
     height: 1.8rem;
     border: none;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px
+    /* border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px */
+    border-radius: 4px;
 }
 
 .input-pesquisar-header::placeholder {
@@ -53,17 +54,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0 0 0 -1rem;
     cursor: pointer;
     width: 35px;
-    height: 31px;
+    height: 32px;
     background-color: #e03213;;
     border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px
+    border-bottom-right-radius: 4px;
+    z-index: 100;
 }
 
 .lupa-input {
-    width: 3vh;
-    height: 3vh;
+    width: 2.2vh;
+    height: 2.2vh;
 }
 
 /* Usuario  */
