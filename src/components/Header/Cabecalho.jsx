@@ -2,6 +2,7 @@ import "./Cabecalho.css";
 import logo from "../../assets/desenvolvedor.png";
 import lupa from "../../assets/pesquisa-de-lupa.png";
 import Nav from "../Nav/Nav";
+import { Link } from "react-router-dom";
 
 const Cabecalho = () => {
   return (
@@ -25,9 +26,10 @@ const Cabecalho = () => {
           </div>
 
           <div className="container-usuario">
-            <button className="btn-login">Sign In</button>
-            <button className="btn-cadastrar">Sign Up</button>
+            <Link to="/login" className="btn-login">Login</Link>
+            <Link to="/cadastro" className="btn-cadastrar">Cadastro</Link>
           </div>
+
         </div>
 
         <div>

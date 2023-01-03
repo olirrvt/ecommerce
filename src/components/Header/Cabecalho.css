@@ -73,40 +73,38 @@
 
 .container-usuario {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    gap: 12.1rem;
+    align-items: center;
+    gap: 2rem;
+}
+
+.btn-login,
+.btn-cadastrar {
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    padding: 0.8rem;
 }
 
 .btn-login {
-    cursor: pointer;
-    background: none;
-    border: none;
-    font-family: Arial, Helvetica, sans-serif;
     color: #fff;
     border-bottom: solid 2px #e03213;
-    margin: 0 -11rem 0 0;
+    transition: all 450ms ease-in-out;
 }
 
 .btn-login:hover {
     background: #eb4e32;
-    border-radius: 2px;
-    transition: all 450ms ease;
+    border-bottom: solid 2px #eb4e32;
+    transition: all 450ms ease-in-out;
 }
 
 .btn-cadastrar {
-    background: #e03213;
     color: #fff;
-    cursor: pointer;
-    font-weight: 700;
-    font-family: Arial, Helvetica, sans-serif;
-    border: none;
-    border-radius: 2px;
-    padding: 0.5rem;
-    transition: all 450ms ease-in;
+    background-color: #e03213;
+    border-radius: 3px;
+    transition: all 450ms ease-in-out;
 }
 
 .btn-cadastrar:hover {
     background-color: #eb4e32;
-    transition: all 450ms ease-in;
+    transition: all 450ms ease-in-out;
 }
