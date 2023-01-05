@@ -1,7 +1,3 @@
-body {
-    background-image: linear-gradient(90deg, #000000 0%, #000000 35%, #ff110059 100%);
-}
-
 .container-login {
     margin: 16rem 0 0 0;
     display: flex;
@@ -14,7 +10,6 @@ body {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    background-color: #ff0f0f13;
     border-radius: 40px 7px 40px 7px;
     box-shadow: 26px 17px 26px -6px #000000;
     color: #fff;

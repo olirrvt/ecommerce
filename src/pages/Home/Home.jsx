@@ -6,8 +6,7 @@ import Footer from "../../components/Footer/Footer";
 
 const Home = () => {
   return (
-    <div className="conteudo">~
-
+    <body className="conteudo">
       <Cabecalho />
 
       <section className="banner-principal">
@@ -15,24 +14,21 @@ const Home = () => {
       </section>
 
       <main>
-
         <div className="container-card">
-            <Card />
-            <Card />
-            <Card />
+          <Card />
+          <Card />
+          <Card />
         </div>
 
         <div className="container-card">
-            <Card />
-            <Card />
-            <Card />
+          <Card />
+          <Card />
+          <Card />
         </div>
-
       </main>
 
       <Footer />
-
-    </div>
+    </body>
   );
 };
 
