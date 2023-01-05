@@ -6,7 +6,7 @@ import Footer from "../../components/Footer/Footer";
 
 const Home = () => {
   return (
-    <body className="conteudo">
+    <>
       <Cabecalho />
 
       <section className="banner-principal">
@@ -28,7 +28,7 @@ const Home = () => {
       </main>
 
       <Footer />
-    </body>
+    </>
   );
 };
 

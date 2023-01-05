@@ -1,5 +1,4 @@
 .container-login {
-    margin: 16rem 0 0 0;
     display: flex;
     justify-content: center;
 }
@@ -10,6 +9,7 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    margin: 10rem 0 0 0;
     border-radius: 40px 7px 40px 7px;
     box-shadow: 26px 17px 26px -6px #000000;
     color: #fff;

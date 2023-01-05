@@ -4,8 +4,8 @@ import login from "../../assets/impressao-digital.png";
 
 const Login = () => {
   return (
-    <>
-      <div>
+      <>
+
         <main>
           <div className="container-login">
             <div className="caixa-login">
@@ -37,8 +37,8 @@ const Login = () => {
             </div>
           </div>
         </main>
-      </div>
-    </>
+
+      </>
   );
 };
 
