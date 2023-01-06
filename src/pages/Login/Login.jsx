@@ -1,10 +1,14 @@
 import "./Login.css";
 import login from "../../assets/impressao-digital.png";
+import BackToHome from "../../components/BackToHome/BackToHome";
+;
 // import { useState, useEffect } from "react";
 
 const Login = () => {
   return (
       <>
+
+       <BackToHome />
 
         <main>
           <div className="container-login">

@@ -17,6 +17,11 @@
     margin: 0 0 0 0.5rem;
 }
 
+.link-home {
+    text-decoration: none;
+    color: #fff;
+}
+
 .titulo-header {
     font-size: 17pt;
     border-bottom: solid 2px #e03213;

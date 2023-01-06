@@ -1,18 +1,15 @@
 import "./Cabecalho.css";
-import logo from "../../assets/desenvolvedor.png";
 import lupa from "../../assets/pesquisa-de-lupa.png";
 import Nav from "../Nav/Nav";
 import { Link } from "react-router-dom";
+import BackToHome from "../BackToHome/BackToHome";
 
 const Cabecalho = () => {
   return (
     <header>
       <div className="container-caixa-header">
         <div className="container-header-principal">
-          <div className="container-logo">
-            <h2 className="titulo-header">TechCommerce</h2>
-            <img src={logo} alt="logo-da-pagina" className="logo-da-pagina" />
-          </div>
+          <BackToHome/>
 
           <div className="container-pesquisar">
             <input
