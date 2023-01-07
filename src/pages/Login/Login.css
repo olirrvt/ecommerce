@@ -45,6 +45,7 @@
 .input-name,
 .input-senha {
     background: none;
+    color: #fff;
     border: none;
     border-bottom: solid 2px rgba(255, 255, 255, 0.562);
     padding: 0 0 0.4rem 0;

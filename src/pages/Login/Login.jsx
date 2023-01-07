@@ -2,9 +2,28 @@ import "./Login.css";
 import login from "../../assets/impressao-digital.png";
 import BackToHome from "../../components/BackToHome/BackToHome";
 ;
-// import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const Login = () => {
+
+  const [name, setName] = useState();
+  const [senha, setSenha] = useState();
+
+  const handleName = (e) => {
+    setName(e.target.value);
+  };
+
+  const handleSenha = (e) => {
+    setSenha(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Requisição e Validação
+    setName("");
+    setSenha("");
+  };
+
   return (
       <>
 
@@ -19,23 +38,32 @@ const Login = () => {
               </div>
 
               <div>
-                <form className="formulario-login">
-                  <input
-                    className="input-name"
-                    placeholder="Usuário"
-                    type="text"
-                    name="nome-user"
-                    id="id-username"
-                  />
-                  <input
-                    className="input-senha"
-                    placeholder="Senha"
-                    type="password"
-                    name="senha-user"
-                    id="id-userpassword"
-                  />
+                <form onSubmit={handleSubmit} className="formulario-login">
+                  <label>
+                    <input
+                      className="input-name"
+                      placeholder="Usuário"
+                      type="text"
+                      name="nome-user"
+                      value={name || ''}
+                      id="id-username"
+                      onChange={handleName}
+                    />
+                  </label>
 
-                  <button className="btn-login-formulario">Entrar</button>
+                  <label>
+                    <input
+                      className="input-senha"
+                      placeholder="Senha"
+                      type="password"
+                      name="senha-user"
+                      value={senha || ''}
+                      id="id-userpassword"
+                      onChange={handleSenha}
+                    />
+                  </label>
+
+                  <input type="submit" value="Enviar" className="btn-login-formulario"></input>
                 </form>
               </div>
             </div>
