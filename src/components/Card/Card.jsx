@@ -1,16 +1,15 @@
 import "./Card.css";
-import produtoExemplo from "../../assets/computador-de-mesa.png";
-import { useEffect, useState } from "react";
 
-const Card = (produtos) => {
-    
-  console.log(produtos.dataProduct)
+const Card = (produto) => {
+
+  console.log(produto.dados);
 
   return (
     <div className="container-card-principal">
 
-        { produtos.dataProduct.map((prod) => (
-                <div className="card">
+        { produto.dados.map((prod) => (
+          
+                <div key={prod.id} className="card">
                 
                 <div className="div-card-body">
         
@@ -27,9 +26,7 @@ const Card = (produtos) => {
                         <button className="btn-card-carrinho">Adicionar ao carrinho</button>
                         <button className="btn-card-comprar">Comprar</button>
                     </div>
-        
                 </div>
-        
               </div>
         ))};
 

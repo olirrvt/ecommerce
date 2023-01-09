@@ -1,5 +1,6 @@
 import "./Banner.css";
 import produto from "../../assets/config.svg";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
     return (
@@ -10,7 +11,7 @@ const Banner = () => {
                 <div className="conteudo-escrito-descricao">
                     Para o seu conforto, estudo ou trabalho doméstico, <br></br> tudo o que você precisa está aqui
                 </div>
-                <button className="btn-comprar">Comprar agora</button>
+                <Link to="/produtos" className="btn-comprar">Ver todos os produtos</Link>
             </div>
 
             <div className="container-da-imagem">

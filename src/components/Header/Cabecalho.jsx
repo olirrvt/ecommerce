@@ -3,6 +3,7 @@ import lupa from "../../assets/pesquisa-de-lupa.png";
 import Nav from "../Nav/Nav";
 import { Link } from "react-router-dom";
 import BackToHome from "../BackToHome/BackToHome";
+import Pesquisar from "../Pesquisar/Pesquisar";
 
 const Cabecalho = () => {
   return (
@@ -12,14 +13,7 @@ const Cabecalho = () => {
           <BackToHome/>
 
           <div className="container-pesquisar">
-            <input
-              className="input-pesquisar-header"
-              type="text"
-              placeholder="Pesquise aqui o produto que deseja..."
-            />
-            <div className="caixa-lupa-pesquisar">
-              <img className="lupa-input" src={lupa} alt="lupa-pesquisar" />
-            </div>
+          <Pesquisar />
           </div>
 
           <div className="container-usuario">
