@@ -2,8 +2,6 @@ import "./Card.css";
 
 const Card = (produto) => {
 
-  console.log(produto.dados);
-
   return (
     <div className="container-card-principal">
 

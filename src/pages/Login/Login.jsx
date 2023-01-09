@@ -3,6 +3,7 @@ import login from "../../assets/impressao-digital.png";
 import BackToHome from "../../components/BackToHome/BackToHome";
 ;
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Login = () => {
 
@@ -63,7 +64,11 @@ const Login = () => {
                     />
                   </label>
 
+                  <div className="container-btn-login">
                   <input type="submit" value="Enviar" className="btn-login-formulario"></input>
+                  <span className="span-link">Não tem cadastro? <Link to="/cadastro" className="link-cadastro">Cadastrar</Link></span>
+                  </div>
+
                 </form>
               </div>
             </div>

@@ -9,11 +9,12 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    margin: 10rem 0 0 0;
+    margin: 5rem 0 0 0;
     border-radius: 40px 7px 40px 7px;
-    box-shadow: 26px 17px 26px -6px #000000;
     color: #fff;
     padding: 4rem;
+    background-color: #111111;
+    box-shadow: -1px 1px 20px 0px #3c1a1a;
 }
 
 /* Caixa de titulo */
@@ -49,12 +50,35 @@
     border: none;
     border-bottom: solid 2px rgba(255, 255, 255, 0.562);
     padding: 0 0 0.4rem 0;
+    width: 100%;
+}
+
+.container-btn-login {
+    display: flex;
+    flex-direction: column;
 }
 
 .btn-login-formulario {
-    background-image: linear-gradient(90deg, #f70c0c 0%, #dd1515 35%, #F36522 100%);
+    background-color: #dd1515;
     border: none;
     border-radius: 4px;
+    margin: 0 0 1rem;
+    cursor: pointer;
+    transition: all 450ms ease-in-out;
 }
 
+.btn-login-formulario:hover {
+    background-color: #080;
+    transition: all 450ms ease-in-out;
+}
 
+.link-cadastro {
+    text-decoration: none;
+    color: #dd1515;
+    cursor: pointer;
+}
+
+.link-cadastro:hover {
+    color: #dc5a5a;
+    transition: all 450ms ease-in-out;
+}
