@@ -1,8 +1,47 @@
-import "./Cadastro.css"
+// CSS
+import "./Cadastro.css";
+// Component
 import BackToHome from "../../components/BackToHome/BackToHome";
+// React Router
 import { Link } from "react-router-dom";
+// React
+import { useEffect, useState } from "react";
+import { usePost } from "../../hooks/usePost";
+// URL to POST
+const url = "http://localhost:4200/newUser";
 
 const Cadastro = () => {
+
+    const [ nome, setNome ] = useState("");    
+    const [ email, setEmail ] = useState("");    
+    const [ senha, setSenha] = useState("");
+    const [body, setBody] = useState([]);    
+
+    const handleNome = (e) => {
+        setNome(e.target.value);
+    };
+
+    const handleEmail = (e) => {
+        setEmail(e.target.value);
+    };
+
+    const handleSenha = (e) => {
+        setSenha(e.target.value);
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        setBody({
+            nome,
+            email,
+            senha
+        })
+
+    };
+
+    body == [] ? [] : usePost(url, body);
+    
     return (
         <>
 
@@ -19,7 +58,8 @@ const Cadastro = () => {
                         </div>
 
                         <div className="container-formulario">
-                            <form className="formulario-cadastro">
+
+                            <form onSubmit={handleSubmit} className="formulario-cadastro">
 
                                 <label>
                                     <input
@@ -28,6 +68,8 @@ const Cadastro = () => {
                                     name="nome-user"
                                     id="username"
                                     placeholder="Insira o seu nome de usuário..."
+                                    onChange={handleNome}
+                                    value={ nome || "" }
                                     />
                                 </label>
 
@@ -38,6 +80,8 @@ const Cadastro = () => {
                                     name="email-user"
                                     id="emailUser"
                                     placeholder="Insira o seu email..."
+                                    onChange={handleEmail}
+                                    value={ email || "" } 
                                     />
                                 </label>
 
@@ -48,6 +92,8 @@ const Cadastro = () => {
                                     name="senha-user"
                                     id="password"
                                     placeholder="Insira a sua senha..."
+                                    onChange={handleSenha}
+                                    value={ senha || "" }
                                     />
                                 </label>
 

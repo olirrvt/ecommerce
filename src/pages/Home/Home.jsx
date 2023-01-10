@@ -1,7 +1,6 @@
 import "./Home.css";
 import Cabecalho from "../../components/Header/Cabecalho";
 import Banner from "../../components/Banner/Banner";
-import Card from "../../components/Card/Card";
 import Footer from "../../components/Footer/Footer";
 
 const Home = () => {

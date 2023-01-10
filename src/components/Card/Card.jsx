@@ -1,11 +1,22 @@
+// React
+import { useEffect, useState } from "react";
+// CSS
 import "./Card.css";
 
-const Card = (produto) => {
+const Card = (items) => {
+
+  const [produto, setProduto] = useState([]);
+
+  useEffect(() => {
+
+    items.dados == null ? null :  
+    setProduto(items.dados.produto);
+  }, [items]);
 
   return (
     <div className="container-card-principal">
 
-        { produto.dados.map((prod) => (
+        { produto && produto.map((prod) => (
           
                 <div key={prod.id} className="card">
                 

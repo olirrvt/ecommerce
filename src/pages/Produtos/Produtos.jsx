@@ -1,26 +1,17 @@
-import { useState, useEffect } from "react";
+// CSS
 import "./Produtos.css";
-import Pesquisar from "../../components/Pesquisar/Pesquisar"
+// Components
 import Footer from "../../components/Footer/Footer";
 import Card from "../../components/Card/Card";
 import Cabecalho from "../../components/Header/Cabecalho";
+// Custom Hook
+import { useGet } from "../../hooks/useGet";
+// URL to FETCH
+const url = "http://localhost:4200/products";
 
 const Produtos = () => {
 
-    const [produtos, setProdutos] = useState([]);
-
-    // GET product
-    const url = "http://localhost:4200/products";
-  
-    useEffect(() => {
-      const getAllproduct = async () => {
-        const res = await fetch(url);
-        const dataProduct = await res.json();
-        setProdutos(dataProduct.produto);
-      };
-  
-      getAllproduct();
-    },[]);
+    const { dados: items } = useGet(url);
 
     return (
         <>
@@ -30,7 +21,7 @@ const Produtos = () => {
                 <div className="container-conteudo-produtos">
 
                     <div className="container-card-produtos">
-                        <Card dados={produtos}/>
+                        <Card dados={items}/>
                     </div>
                 </div>
             </main>
