@@ -6,6 +6,7 @@ import BackToHome from "../../components/BackToHome/BackToHome";
 import { Link } from "react-router-dom";
 // React
 import { useState } from "react";
+import { useFetch } from "../../hooks/useFetch";
 // URL to POST
 const url = "http://localhost:4200/newUser";
 
@@ -15,6 +16,8 @@ const Cadastro = () => {
     const [ email, setEmail ] = useState("");    
     const [ senha, setSenha] = useState("");
     const [body, setBody] = useState(null);
+
+    const { httpConfig } = useFetch(url);
 
     const handleNome = (e) => {
         setNome(e.target.value);
@@ -29,14 +32,16 @@ const Cadastro = () => {
     };
 
     const handleSubmit = (e) => {
-
         e.preventDefault();
 
-            setBody({
-                nome,
-                email,
-                senha
-            });
+        const user = {
+            nome,
+            email,
+            senha
+        };
+
+        httpConfig(user, "POST");
+
     };
 
     
