@@ -7,7 +7,7 @@ import Cabecalho from "../../components/Header/Cabecalho";
 // Custom Hook
 import { useFetch } from "../../hooks/useFetch";
 // URL to FETCH
-const url = "http://localhost:4200/products";
+const url = "http://localhost:4000/products";
 
 const Produtos = () => {
 

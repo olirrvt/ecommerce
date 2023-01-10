@@ -38,6 +38,12 @@
     color: #fff;
     width: 13rem;
     padding: 0.5rem;
+    transition: all 450ms ease-in-out;
+}
+
+.input-cadastro:focus {
+    border: solid 2px #dd1515;
+    transition: all 450ms ease-in-out;
 }
 
 .container-btn-cadastrar {

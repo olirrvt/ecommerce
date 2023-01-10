@@ -6,28 +6,29 @@ import BackToHome from "../../components/BackToHome/BackToHome";
 import { Link } from "react-router-dom";
 // React
 import { useState } from "react";
-import { useFetch } from "../../hooks/useFetch";
 // URL to POST
-const url = "http://localhost:4200/newUser";
+const url = "http://localhost:4000/newUser";
 
 const Cadastro = () => {
 
     const [ nome, setNome ] = useState("");    
     const [ email, setEmail ] = useState("");    
     const [ senha, setSenha] = useState("");
-    const [body, setBody] = useState(null);
-
-    const { httpConfig } = useFetch(url);
+    // POST Reply
+    const [resposta, setResposta] = useState(null);
 
     const handleNome = (e) => {
+        // Validation
         setNome(e.target.value);
     };
 
     const handleEmail = (e) => {
+        // Validation
         setEmail(e.target.value);
     };
 
     const handleSenha = (e) => {
+        // Validation
         setSenha(e.target.value);
     };
 
@@ -38,10 +39,24 @@ const Cadastro = () => {
             nome,
             email,
             senha
+        }
+
+        const httpPost = async (user) => {
+            const res = await fetch(url, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(user),
+            })
+            .then(res => res.json())
+            .then((res) => {
+                setResposta(res);
+            })
         };
 
-        httpConfig(user, "POST");
-
+        httpPost(user);
+        
     };
 
     
