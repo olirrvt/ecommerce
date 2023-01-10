@@ -6,7 +6,6 @@ import BackToHome from "../../components/BackToHome/BackToHome";
 import { Link } from "react-router-dom";
 // React
 import { useState } from "react";
-import { usePost } from "../../hooks/usePost";
 // URL to POST
 const url = "http://localhost:4200/newUser";
 
@@ -15,7 +14,7 @@ const Cadastro = () => {
     const [ nome, setNome ] = useState("");    
     const [ email, setEmail ] = useState("");    
     const [ senha, setSenha] = useState("");
-    const [body, setBody] = useState(null);    
+    const [body, setBody] = useState(null);
 
     const handleNome = (e) => {
         setNome(e.target.value);
@@ -39,9 +38,6 @@ const Cadastro = () => {
                 senha
             });
     };
-
-
-    const httpPost = body == null ? console.log("vazio!") : usePost(url, body);
 
     
     return (

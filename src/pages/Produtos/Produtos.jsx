@@ -5,13 +5,13 @@ import Footer from "../../components/Footer/Footer";
 import Card from "../../components/Card/Card";
 import Cabecalho from "../../components/Header/Cabecalho";
 // Custom Hook
-import { useGet } from "../../hooks/useGet";
+import { useFetch } from "../../hooks/useFetch";
 // URL to FETCH
 const url = "http://localhost:4200/products";
 
 const Produtos = () => {
 
-    const { dados: items } = useGet(url);
+    const { dados: items } = useFetch(url);
 
     return (
         <>
