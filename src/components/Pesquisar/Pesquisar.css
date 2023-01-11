@@ -1,12 +1,26 @@
 .input-pesquisar-header {
     width: 25rem;
     height: 1.8rem;
+    /* border: solid 2px #e03213b4; */
     border: none;
-    border-radius: 4px;
+    border-bottom: solid 2px #e03213;;
+    background: none;
+    /* background-color: #272626; */
+    transition: all 450ms ease;
 }
 
 .input-pesquisar-header::placeholder {
-    padding-left: 1rem;
+    color: #fff;
+    text-align: center;
     font-weight: bolder;
     font-size: 9pt;
+}
+
+.input-pesquisar-header:focus {
+    border: solid 2px #e03213;
+    color: #fff;
+    border-radius: 8px;
+    padding: 0.2rem;
+    box-shadow: 0px 0px 20px 8px #dd1515;
+    transition: all 450ms ease;
 }
