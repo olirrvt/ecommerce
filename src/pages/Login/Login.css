@@ -56,7 +56,6 @@
 
 .input-name:focus,
 .input-senha:focus {
-    border: solid 2px #dd1515;
     padding: 0.6rem;
     width: 89%;
     border-radius: 8px;

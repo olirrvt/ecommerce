@@ -124,19 +124,24 @@ const Cadastro = () => {
                   />
                 </label>
 
-                {!load && (
                   <div className="container-btn-cadastrar">
+                {load && (
+                    <button className="btn-cadastro" disabled type="submit">
+                      Aguarde...
+                    </button>
+                      )}
+                {!load && (
                     <button className="btn-cadastro" type="submit">
                       Cadastrar
                     </button>
+                      )}
                     <span className="span-link">
-                      Já possui cadastro?{" "}
+                      Já possui cadastro? {" "}
                       <Link to="/login" className="link-login">
-                        Entrar
-                      </Link>{" "}
+                         {" "} Entrar
+                      </Link>
                     </span>
                   </div>
-                )}
               </form>
 
             </div>
