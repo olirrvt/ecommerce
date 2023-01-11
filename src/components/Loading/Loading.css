@@ -1,0 +1,11 @@
+/* Loading Produtos */
+
+.container-loading {
+    margin: 10rem 0 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+.loadGif {
+    width: 25vh;
+}
