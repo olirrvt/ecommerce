@@ -14,9 +14,15 @@ import { Link, redirect } from "react-router-dom";
 
 const Login = () => {
 
+  // Input
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
-  const [usuario, setUsuario] = useState(null)
+  // User
+  const [usuario, setUsuario] = useState(null);
+  const [resposta, setResposta] = useState(null);
+  const [offline, setOffline] = useState(true);
+  // Loading
+  const [loading, setLoading] = useState(false);
 
   const handleEmail = (e) => {
     setEmail(e.target.value);
@@ -27,26 +33,37 @@ const Login = () => {
     console.log(senha)
   };
 
+  const setLocalStorage = (usuario) => {
+    console.log(usuario, resposta);
+      localStorage.setItem("nome", usuario[0].nome);
+      localStorage.setItem("email", usuario[0].email);
+      localStorage.setItem("logado", resposta.logado);
+      setOffline(false);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     
+    setLoading(true);
+
     loginService(email, senha)
     .then((res) => {
-      console.log(res);
-      setUsuario(res);
-    })
-    .catch((erro) => {
-      console.log(erro);
+      setResposta(res.data);
+      setUsuario(res.data.usuario);
+
     });
+
+    setLoading(false);
 
     setEmail("");
     setSenha("");
   };
 
   useEffect(() => {
-    console.log(usuario);
-    redirect
-  }, [usuario]);
+    if(usuario) {
+      resposta.logado ? setLocalStorage(usuario) : setOffline(true);
+    } 
+  }, [resposta, usuario]);
 
   return (
       <>
@@ -86,13 +103,16 @@ const Login = () => {
                       onChange={handleSenha}
                     />
                   </label>
+                
+                <div className="container-btn-login">
+                { loading && <input value="Enviar" className="btn-login-formulario"></input> }
+                { !loading && <input type="submit" value="Enviar" className="btn-login-formulario"></input> }
+                <span className="span-link">Não tem cadastro? <Link to="/cadastro" className="link-cadastro">Cadastrar</Link></span>
 
-                  <div className="container-btn-login">
-                  <input type="submit" value="Enviar" className="btn-login-formulario"></input>
-                  <span className="span-link">Não tem cadastro? <Link to="/cadastro" className="link-cadastro">Cadastrar</Link></span>
-                  </div>
+                </div> 
 
                 </form>
+
               </div>
             </div>
           </div>
