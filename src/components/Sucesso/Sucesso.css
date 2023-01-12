@@ -1,0 +1,29 @@
+.container-sucesso {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 7rem 0 0 0;
+}
+
+.caixa-sucesso {
+    display: flex;
+    flex-direction: column;
+    background-color: #16A185;
+    border-radius: 10px;
+    padding: 2rem;
+    width: 50%;
+    align-items: center;
+}
+
+.conteudo-sucesso-escrito {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+}
+
+.link-home {
+    text-decoration: none;
+}
+
+.icon-sucesso {
+    width: 30vh;
+}
