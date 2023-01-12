@@ -22,7 +22,7 @@ const Produtos = () => {
         ) : (
           <div className="container-conteudo-produtos">
             <div className="container-card-produtos">
-              <Card dados={items} load={loading} />
+              <Card dados={items} />
             </div>
           </div>
         )}

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 // CSS
 import "./Card.css";
 
-const Card = (items, loading) => {
+const Card = (items) => {
 
   const [produto, setProduto] = useState([]);
 

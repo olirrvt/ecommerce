@@ -1,3 +1,5 @@
+// Attention, 👨‍💻 
+// I'm using Axios and Fetch in the same application for studies.
 import { useState, useEffect } from "react";
 
 export const useFetch = (url) => {

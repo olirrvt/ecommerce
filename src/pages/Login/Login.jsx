@@ -1,29 +1,52 @@
+// CSS
 import "./Login.css";
-import login from "../../assets/impressao-digital.png";
+// Assets
+import iconLogin from "../../assets/impressao-digital.png";
+// Components
 import BackToHome from "../../components/BackToHome/BackToHome";
 ;
-import { useState } from "react";
-import { Link } from "react-router-dom";
+// Function Axios
+import loginService from "../../services";
+// React
+import { useEffect, useState } from "react";
+// React Router
+import { Link, redirect } from "react-router-dom";
 
 const Login = () => {
 
-  const [name, setName] = useState();
-  const [senha, setSenha] = useState();
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+  const [usuario, setUsuario] = useState(null)
 
-  const handleName = (e) => {
-    setName(e.target.value);
+  const handleEmail = (e) => {
+    setEmail(e.target.value);
   };
 
   const handleSenha = (e) => {
     setSenha(e.target.value);
+    console.log(senha)
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Requisição e Validação
-    setName("");
+    
+    loginService(email, senha)
+    .then((res) => {
+      console.log(res);
+      setUsuario(res);
+    })
+    .catch((erro) => {
+      console.log(erro);
+    });
+
+    setEmail("");
     setSenha("");
   };
+
+  useEffect(() => {
+    console.log(usuario);
+    redirect
+  }, [usuario]);
 
   return (
       <>
@@ -34,7 +57,7 @@ const Login = () => {
           <div className="container-login">
             <div className="caixa-login">
               <div className="conteudo-login">
-                <img className="login-icon" src={login} alt="icone-de-login" />
+                <img className="login-icon" src={iconLogin} alt="icone-de-login" />
                 <h3 className="titulo-login">Faça o seu Login</h3>
               </div>
 
@@ -42,13 +65,13 @@ const Login = () => {
                 <form onSubmit={handleSubmit} className="formulario-login">
                   <label>
                     <input
-                      className="input-name"
-                      placeholder="Usuário"
-                      type="text"
-                      name="nome-user"
-                      value={name || ''}
-                      id="id-username"
-                      onChange={handleName}
+                      className="input-email"
+                      placeholder="E-mail"
+                      type="email"
+                      name="email-user"
+                      value={email || ''}
+                      id="id-email"
+                      onChange={handleEmail}
                     />
                   </label>
 

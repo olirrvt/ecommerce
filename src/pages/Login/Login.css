@@ -43,7 +43,7 @@
     margin: 2rem 0 0 0;
 }
 
-.input-name,
+.input-email,
 .input-senha {
     background: none;
     color: #fff;
@@ -54,7 +54,7 @@
     transition: all 600ms ease;
 }
 
-.input-name:focus,
+.input-email:focus,
 .input-senha:focus {
     padding: 0.6rem;
     width: 89%;
