@@ -35,6 +35,7 @@ const Login = () => {
   };
 
   const setLocalStorage = (usuario) => {
+    // Update application security 👮‍♂️
     console.log(usuario, resposta);
     localStorage.setItem("nome", usuario[0].nome);
     localStorage.setItem("email", usuario[0].email);
