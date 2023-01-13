@@ -61,7 +61,6 @@ const Login = () => {
   };
 
   useEffect(() => {
-    console.log(usuario);
     if (usuario) {
       resposta.logado ? setLocalStorage(usuario) : setError(true);
     }
@@ -124,25 +123,26 @@ const Login = () => {
                   </label>
 
                   <div className="container-btn-login">
-                    {loading && (
-                      <input
-                        value="Enviar"
+                    { loading && (
+                      <button
+                        disabled
                         className="btn-login-formulario"
-                      ></input>
+                      >Aguarde...</button>
                     )}
-                    {!loading && (
-                      <input
+                    { !loading && (
+                      <button
                         type="submit"
-                        value="Enviar"
                         className="btn-login-formulario"
-                      ></input>
+                      >Enviar</button>
                     )}
+
                     <span className="span-link">
                       Não tem cadastro?{" "}
                       <Link to="/cadastro" className="link-cadastro">
                         Cadastrar
                       </Link>
                     </span>
+
                   </div>
                 </form>
               </div>
