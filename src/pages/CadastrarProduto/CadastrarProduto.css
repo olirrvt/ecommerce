@@ -1,7 +1,7 @@
 .container-cadastro-produto {
     display: flex;
     justify-content: center;
-    margin: 5rem 0 0 0;
+    margin: 5rem 0 5rem 0;
 }
 
 .caixa-form-produto {
@@ -9,7 +9,7 @@
     align-items: center;
     width: 50%;
     padding: 2rem;
-    background-color: #96110E;
+    background-color: #b0110eec;
     border-radius: 10px;
     box-shadow: 0px 1px 20px 7px #96110e;
 }
@@ -24,8 +24,8 @@
 .input-titulo,
 .input-descricao {
     margin: 0.2rem 0 0 0;
-    background-color: #2d2c2c;
-    color: #fff;
+    background-color: #eee7e7;
+    color: #000;
     border: none;
     border-radius: 4px;
     padding: 0.4rem;
@@ -40,8 +40,26 @@
     font-weight: 700;
 }
 
+.btn-produto {
+    border: none;
+    background-color: #F36A3D;
+    color: #eee7e7;
+    border-radius: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    font-size: 9pt;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: all 450ms ease-in-out;
+}
+
+.btn-produto:hover {
+    background-color: #080;
+    transition: all 450ms ease-in-out;
+}
+
 .container-imagem {
-    margin: 0 0 0 3rem;
+    margin: 0 0 0 4rem;
 }
 
 .img-produto {

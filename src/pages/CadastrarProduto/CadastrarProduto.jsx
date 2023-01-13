@@ -3,8 +3,40 @@ import "./CadastrarProduto.css";
 import BackToHome from "../../components/BackToHome/BackToHome";
 // Assets
 import comprando from "../../assets/troca.png"
+// Footer
+import Footer from "../../components/Footer/Footer"
+import { useState } from "react";
 
 const CadastrarProduto = () => {
+
+  const [titulo, setTitulo] = useState("");
+  const [descricao, setDescricao] = useState("");
+  const [valor, setValor] = useState("");
+
+  const handleTitulo = (e) => {
+    setTitulo(e.target.value);
+  }
+
+  const handleDescricao = (e) => {
+    setDescricao(e.target.value);
+  }
+
+  const handleValor = (e) => {
+    setValor(e.target.value);
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const objProduto = {
+      titulo,
+      descricao,
+      valor
+    }
+
+    console.log(objProduto)
+  }
+
   return (
     <>
       <BackToHome />
@@ -13,26 +45,28 @@ const CadastrarProduto = () => {
         <div className="container-cadastro-produto">
           <div className="caixa-form-produto">
 
-            <form className="formulario-produto">
+            <form onSubmit={handleSubmit} className="formulario-produto">
               <label>
                 Titulo do Produto:
                 <input 
                 className="input-titulo"
-                name="" 
-                id="" 
+                name="titulo-do-produto" 
+                id="titulo-produto" 
                 type="text" 
-                placeholder="Informe o titulo do produto..."/>
+                placeholder="Informe o titulo do produto..."
+                onChange={handleTitulo}/>
               </label>
 
               <label>
                 Descrição do Produto:
                 <textarea 
                 className="input-descricao"
-                name="" 
-                id="" 
+                name="descricao-produto" 
+                id="descProduto" 
                 cols="30" 
                 rows="10"
-                placeholder="Informe a descrição do produto...">
+                placeholder="Informe a descrição do produto..."
+                onChange={handleDescricao}>
 
                 </textarea>
               </label>
@@ -41,11 +75,16 @@ const CadastrarProduto = () => {
                 Valor do produto:
                 <input
                 className="input-valor"
-                name=""
-                id=""
+                name="valor-do-produto"
+                id="valorProduto"
                 type="number" 
-                placeholder="Informe o valor do produto..."/>
+                placeholder="Informe o valor do produto..."
+                onChange={handleValor}/>
               </label>
+
+              <button type="submit" className="btn-produto">
+                Cadastrar Produto
+              </button>
             </form>
 
             <div className="container-imagem">
@@ -55,6 +94,8 @@ const CadastrarProduto = () => {
           </div>
         </div>
       </main>
+
+      <Footer />
     </>
   );
 };
