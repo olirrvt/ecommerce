@@ -1,26 +1,56 @@
+// CSS
 import "./Cabecalho.css";
-import lupa from "../../assets/pesquisa-de-lupa.png";
-import Nav from "../Nav/Nav";
-import { Link } from "react-router-dom";
-import BackToHome from "../BackToHome/BackToHome";
+// Componets
+import ToUsuario from "../ToUsuario/ToUsuario";
 import Pesquisar from "../Pesquisar/Pesquisar";
+import Nav from "../Nav/Nav";
+import BackToHome from "../BackToHome/BackToHome";
+// ReactRouter
+import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const Cabecalho = () => {
+
+  const [ logado, setLogado ] = useState(false);
+
+  const authStorage = localStorage.getItem("logado");
+  const authUser = authStorage === "true" ? true : false;
+
+  useEffect(() => {
+    authUser ? setLogado(true) : setLogado(false);
+  }, [authUser]);
+
   return (
     <header>
       <div className="container-caixa-header">
-        <div className="container-header-principal">
-          <BackToHome/>
+        <div
+          className={
+            logado ? "container-header-logado" : "container-header-principal"
+          }
+        >
+          <BackToHome />
 
-          <div className="container-pesquisar">
-          <Pesquisar />
-          </div>
+          {!logado && (
+            <div className="container-pesquisar">
+              <Pesquisar />
+            </div>
+          )}
 
           <div className="container-usuario">
-            <Link to="/login" className="btn-login">Login</Link>
-            <Link to="/cadastro" className="btn-cadastrar">Cadastro</Link>
+            {!logado ? (
+              <>
+                {" "}
+                <Link to="/login" className="btn-login">
+                  Login
+                </Link>
+                <Link to="/cadastro" className="btn-cadastrar">
+                  Cadastro
+                </Link>
+              </>
+            ) : (
+              <ToUsuario />
+            )}
           </div>
-
         </div>
 
         <div>

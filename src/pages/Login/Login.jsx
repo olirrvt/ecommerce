@@ -2,9 +2,10 @@
 import "./Login.css";
 // Assets
 import iconLogin from "../../assets/impressao-digital.png";
+import errorLogin from "../../assets/aviso.png";
 // Components
 import BackToHome from "../../components/BackToHome/BackToHome";
-
+import Sucesso from "../../components/Sucesso/Sucesso";
 // Function Axios
 import loginService from "../../services";
 // React
@@ -20,6 +21,7 @@ const Login = () => {
   const [usuario, setUsuario] = useState(null);
   const [resposta, setResposta] = useState(null);
   const [offline, setOffline] = useState(true);
+  const [error, setError] = useState(false);
   // Loading
   const [loading, setLoading] = useState(false);
 
@@ -37,7 +39,8 @@ const Login = () => {
     localStorage.setItem("nome", usuario[0].nome);
     localStorage.setItem("email", usuario[0].email);
     localStorage.setItem("logado", resposta.logado);
-    setOffline(true);
+    setOffline(false);
+    setError(false);
   };
 
   const handleSubmit = (e) => {
@@ -57,8 +60,9 @@ const Login = () => {
   };
 
   useEffect(() => {
+    console.log(usuario);
     if (usuario) {
-      resposta.logado ? setLocalStorage(usuario) : setOffline(true);
+      resposta.logado ? setLocalStorage(usuario) : setError(true);
     }
   }, [resposta, usuario]);
 
@@ -66,7 +70,10 @@ const Login = () => {
     <>
       <BackToHome />
 
-        <main>
+      <main>
+        {!offline ? (
+          <Sucesso />
+        ) : (
           <div className="container-login">
             <div className="caixa-login">
               <div className="conteudo-login">
@@ -79,6 +86,17 @@ const Login = () => {
               </div>
 
               <div>
+                {error && (
+                  <span className="error-login">
+                    Erro na autenticação.{" "}
+                    <img
+                      className="error-img"
+                      src={errorLogin}
+                      alt="error-login"
+                    />
+                  </span>
+                )}
+
                 <form onSubmit={handleSubmit} className="formulario-login">
                   <label>
                     <input
@@ -129,7 +147,8 @@ const Login = () => {
               </div>
             </div>
           </div>
-        </main>
+        )}
+      </main>
     </>
   );
 };

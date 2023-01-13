@@ -1,0 +1,63 @@
+.container-usuario {
+    display: flex;
+    align-items: center;
+}
+
+.btn-perfil,
+.btn-cadastrar-produtos {
+    text-decoration: none;
+}
+
+.btn-perfil,
+.btn-cadastrar-produtos {
+    color: #fff;
+    background-color: none;
+    border-bottom: 2px solid #e03213;
+    border-radius: 3px;
+    padding: 0.5rem;
+}
+
+.link-perfil {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.nome-user {
+    color: #fff;
+    margin: 0 0 0 0.4rem;
+}
+
+.user-png {
+    width: 3vh;
+    border: solid 5px #fff;
+    background-color: #fff;
+    border-radius: 100%;
+}
+
+.link-btn-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border: 2px solid #fff;
+    border-radius: 100%;
+    padding: 0.2rem;
+}
+
+.carrinho-png,
+.add-produto-png {
+    box-sizing: border-box;
+    width: 3vh;
+}
+
+.btn-logout {
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin: 0.1rem 0 0 -0.8rem;
+}
+
+.logout-user {
+    width: 4.2vh;
+}

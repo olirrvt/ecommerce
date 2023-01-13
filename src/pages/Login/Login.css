@@ -36,6 +36,17 @@
 
 /* Formulário de Login */
 
+.error-login {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    color: #FFD55D;
+}
+
+.error-img {
+    width: 6vh;
+}
+
 .formulario-login {
     display: flex;
     flex-direction: column;

@@ -12,6 +12,13 @@
     justify-content: space-around;
 }
 
+.container-header-logado {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .container-logo {
     display: flex;
     align-items: center;
@@ -80,3 +87,4 @@
     background-color: #eb4e32;
     transition: all 450ms ease-in-out;
 }
+
