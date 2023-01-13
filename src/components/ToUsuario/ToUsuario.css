@@ -37,18 +37,27 @@
 
 .link-btn-login {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
-    border: 2px solid #fff;
+    align-items: baseline;
+    flex-direction: column;
     border-radius: 100%;
-    padding: 0.2rem;
+    margin: 0.5rem 0 0 0;
+    padding: 0.5rem;
+    width: 4vh;
 }
 
 .carrinho-png,
 .add-produto-png {
     box-sizing: border-box;
-    width: 3vh;
+    background-color: #fff;
+    border: 2px solid #fff;
+    border-radius: 100%;
+    width: 5vh;
+}
+
+.carrinho-escrito,
+.addProduto-escrito {
+    color: #fff;
+    font-size: 7pt;
 }
 
 .btn-logout {
