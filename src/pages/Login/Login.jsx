@@ -11,7 +11,7 @@ import loginService from "../../services";
 // React
 import { useEffect, useState } from "react";
 // React Router
-import { Link, redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   // Input
