@@ -3,6 +3,8 @@ import "./Cadastro.css";
 // Component
 import BackToHome from "../../components/BackToHome/BackToHome";
 import Sucesso from "../../components/Sucesso/Sucesso";
+// Assets
+import avisoImg from "../../assets/aviso.png";
 // React Router
 import { Link } from "react-router-dom";
 // React
@@ -20,9 +22,12 @@ const Cadastro = () => {
   // POST Reply
   const [resposta, setResposta] = useState(null);
   const [logado, setLogado] = useState(false);
+  // Error
+  const [error, setError] = useState(false);
 
   const handleNome = (e) => {
     // Validation
+    setError(false);
     setNome(e.target.value);
   };
 
@@ -68,7 +73,11 @@ const Cadastro = () => {
       .then((res) => res.json())
       .then((res) => {
         setResposta(res);
-        logUser(res);
+        if (res.message === "Usuário inserido com sucesso!") {
+          logUser(res);
+        } else {
+          setError(true);
+        }
       });
 
     setLoad(false);
@@ -133,6 +142,13 @@ const Cadastro = () => {
                       value={senha || ""}
                     />
                   </label>
+
+                  {error && (
+                    <div className="container-error">
+                      <img className="img-aviso" src={avisoImg} alt="imagem-de-aviso" />
+                      <span className="msg-error">Usuário já cadastrado!</span>
+                    </div>
+                  )}
 
                   <div className="container-btn-cadastrar">
                     {load && (

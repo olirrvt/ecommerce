@@ -7,7 +7,7 @@ import errorLogin from "../../assets/aviso.png";
 import BackToHome from "../../components/BackToHome/BackToHome";
 import Sucesso from "../../components/Sucesso/Sucesso";
 // Function Axios
-import loginService from "../../services";
+import loginService from "../../services/login";
 // React
 import { useEffect, useState } from "react";
 // React Router

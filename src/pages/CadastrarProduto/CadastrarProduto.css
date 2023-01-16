@@ -6,13 +6,34 @@
 
 .caixa-form-produto {
     display: flex;
-    align-items: center;
-    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
     padding: 2rem;
     background-color: #b0110eec;
     border-radius: 10px;
     box-shadow: 0px 1px 20px 7px #96110e;
 }
+
+/* Mensagem do produto */
+
+.container-mensagem {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 1rem 0;
+}
+
+.msg-produto {
+    background-color: #13C20F;
+    padding: 0.4rem;
+    border-radius: 4px;
+    box-shadow: 0px 1px 6px 1px #13c20f;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+}
+
+
+/* Formulario do Produto */
 
 .formulario-produto {
     display: flex;
@@ -56,13 +77,4 @@
 .btn-produto:hover {
     background-color: #080;
     transition: all 450ms ease-in-out;
-}
-
-.container-imagem {
-    margin: 0 0 0 4rem;
-}
-
-.img-produto {
-    height: 30vh;
-    width: 30vh;
 }
