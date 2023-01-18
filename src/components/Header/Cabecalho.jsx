@@ -7,26 +7,8 @@ import BackToHome from "../BackToHome/BackToHome";
 // ReactRouter
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import findAllProducts from "../../services/searchProduto";
 
-const Cabecalho = ({ findProd, handleRes }) => {
-
-  // Search Product
-  const [produtoInput, setProdutoInput] = useState("");  
-
-  // Setando valor do produto
-  const handleProduto = (e) => {
-    setProdutoInput(e.target.value);
-  };
-
-  // Enviando para o Componente pai
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    findProd(produtoInput);
-    findAllProducts().then((res) => {
-      console.log(res);
-    });
-  }
+const Cabecalho = () => {
 
   // Checking Login
   const [logado, setLogado] = useState(false);
@@ -48,21 +30,8 @@ const Cabecalho = ({ findProd, handleRes }) => {
         >
           <BackToHome />
 
-          {!logado && (
-            <div className="container-pesquisar">
-              <form onSubmit={handleSubmit}>
-                <label>
-                  <input
-                    className="input-pesquisar-header"
-                    type="text"
-                    placeholder="Pesquise aqui o produto que deseja..."
-                    name="input-pesquisar"
-                    onChange={handleProduto}
-                  />
-                </label>
-              </form>
-            </div>
-          )}
+          {/* {!logado && (
+          )} */}
 
           <div className="container-usuario">
             {!logado ? (

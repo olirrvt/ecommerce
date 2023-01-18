@@ -2,21 +2,26 @@
 import "./Produtos.css";
 // Components
 import Card from "../../components/Card/Card";
-import Cabecalho from "../../components/Header/Cabecalho";
+import BackToHome from "../../components/BackToHome/BackToHome";
 import Loading from "../../components/Loading/Loading";
 // Custom Hook
 import { useFetch } from "../../hooks/useFetch";
+import { useEffect, useState } from "react";
 // URL to FETCH
 const url = "http://localhost:4000/products";
 
 const Produtos = () => {
+  
+  // Dados dos Produtos
   const { dados: items, loading } = useFetch(url);
 
   return (
     <>
-      <Cabecalho />
+
+      <BackToHome />
 
       <main>
+
         {loading ? (
           <Loading />
         ) : (

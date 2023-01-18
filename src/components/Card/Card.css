@@ -1,3 +1,38 @@
+/* Pesquisar */
+
+.container-pesquisar {
+    display: flex;
+    justify-content: center;
+    margin: 5rem 0 5rem 0;
+}
+
+.input-pesquisar-header {
+    width: 25rem;
+    height: 1.8rem;
+    border: none;
+    border-bottom: solid 2px #e03213;;
+    background: none;
+    transition: all 450ms ease;
+}
+
+.input-pesquisar-header::placeholder {
+    color: #fff;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 9pt;
+}
+
+.input-pesquisar-header:focus {
+    border: solid 2px #e03213;
+    color: #fff;
+    border-radius: 8px;
+    padding: 0.2rem;
+    box-shadow: 0px 0px 20px 8px #dd1515;
+    transition: all 450ms ease;
+}
+
+/* Card */
+
 .container-card-principal {
     margin: 0.3rem 0 0 0;
     display: flex;
