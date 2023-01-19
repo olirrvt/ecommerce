@@ -13,8 +13,11 @@
 
 .card-container-principal {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
 }
+
+/* Footer */
 
 footer {
     margin: 5rem 0 0 0;
