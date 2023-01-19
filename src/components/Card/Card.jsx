@@ -6,6 +6,7 @@ import "./Card.css";
 const Card = (items) => {
 
   // GET ALL PRODUCTS
+
   const [produto, setProduto] = useState([]);
 
   useEffect(() => {
