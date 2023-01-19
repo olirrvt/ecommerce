@@ -3,6 +3,7 @@ import "./Produtos.css";
 // Components
 import Card from "../../components/Card/Card";
 import Loading from "../../components/Loading/Loading";
+import BackToHome from "../../components/BackToHome/BackToHome";
 // Custom Hook
 import { useFetch } from "../../hooks/useFetch";
 // URL to FETCH
@@ -15,6 +16,9 @@ const Produtos = () => {
 
   return (
     <>
+
+      <BackToHome />
+
       <main>
         {loading ? (
           <Loading />
