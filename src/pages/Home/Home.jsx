@@ -26,6 +26,7 @@ const Home = () => {
       </section>
 
       <main>
+        {/* <h2>Produtos em Destaque</h2> */}
         <div className="card-container-principal">
           <CardHome items={items} />
         </div>
