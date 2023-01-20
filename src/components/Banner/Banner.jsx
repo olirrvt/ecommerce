@@ -11,7 +11,7 @@ const Banner = () => {
                 <div className="conteudo-escrito-descricao">
                     Para o seu conforto, estudo ou trabalho doméstico, <br></br> tudo o que você precisa está aqui
                 </div>
-                <Link to="/produtos" className="btn-comprar">Ver todos os produtos</Link>
+                <Link to="/produtos" className="btn-comprar">Ver Produtos Disponíveis</Link>
             </div>
 
             <div className="container-da-imagem">

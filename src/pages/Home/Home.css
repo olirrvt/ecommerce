@@ -17,6 +17,28 @@
     justify-content: center;
 }
 
+/* Main */
+
+.main-home {
+    display: flex;
+    justify-content: center;
+}
+
+.container-produtos-destaque {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    width: 94%;
+}
+
+.produto-destaque {
+    text-align: center;
+}
+
+.produto-destaque h2 {
+    color: #fff;
+}
+
 /* Footer */
 
 footer {

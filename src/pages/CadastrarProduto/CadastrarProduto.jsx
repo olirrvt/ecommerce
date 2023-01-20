@@ -18,6 +18,7 @@ const CadastrarProduto = () => {
 
   const handleTitulo = (e) => {
     setTitulo(e.target.value);
+    setAdded(false);
   };
 
   const handleDescricao = (e) => {

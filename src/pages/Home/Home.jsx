@@ -25,11 +25,17 @@ const Home = () => {
         <Banner />
       </section>
 
-      <main>
-        {/* <h2>Produtos em Destaque</h2> */}
-        <div className="card-container-principal">
-          <CardHome items={items} />
+      <main className="main-home">
+
+        <div className="container-produtos-destaque">
+          <div className="produto-destaque">
+            <h2>Produtos em Destaque</h2>
+          </div>
+          <div className="card-container-principal">
+            <CardHome items={items} />
+          </div>
         </div>
+        
       </main>
 
       <Footer />
