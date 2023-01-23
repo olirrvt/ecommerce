@@ -38,6 +38,7 @@
 .container-card-principal {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .card {
@@ -92,4 +93,41 @@
 
 .cartao-produto {
     color: #e03213;
+}
+
+/* Botão Footer Card */
+
+.container-btn-produtos {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 1rem 0 0 0;
+}
+
+.comprar-produto, 
+.add-produto {
+    color: #fff;
+    padding: 0.4rem;
+    box-shadow: inset 0px 0px 3px 0px #0a0a0a;
+    cursor: pointer;
+}
+
+.comprar-produto {
+    background-color: #e6390e;
+    transition: all 450ms ease-in-out;
+}
+
+.comprar-produto:hover {
+    background-color: #080;
+    transition: all 450ms ease-in-out;
+}
+
+.add-produto {
+    background-color: #812109;
+    transition: all 450ms ease-in-out;
+}
+
+.add-produto:hover {
+    background-color: #b63110;
+    transition: all 450ms ease-in-out;
 }

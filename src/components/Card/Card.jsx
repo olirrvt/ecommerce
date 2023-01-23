@@ -97,11 +97,19 @@ const Card = (items) => {
                   </div>
 
                   <div className="card-footer">
+
                     <div className="cartao-produto">
+
                       <span>Em até 12x de </span>
                       R$ {(prod.valor / 12).toFixed(2)}
                     </div>
-                    <span> sem juros no cartão</span>
+                    <span> Sem juros no cartão</span>
+
+                    <div className="container-btn-produtos">
+                      <button className="comprar-produto">Comprar</button>
+                      <button className="add-produto">Adicionar ao carrinho</button>
+                    </div>
+
                   </div>
                 </div>
               ))}
@@ -131,7 +139,11 @@ const Card = (items) => {
                       <span>Em até 12x de </span>
                       R$ {(prod.valor / 12).toFixed(2)}
                     </div>
-                    <span> sem juros no cartão</span>
+                    <span> Sem juros no cartão</span>
+                    <div className="container-btn-produtos">
+                      <button className="comprar-produto">Comprar</button>
+                      <button className="add-produto">Adicionar ao carrinho</button>
+                    </div>
                   </div>
                 </div>
               ))}
