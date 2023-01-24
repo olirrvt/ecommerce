@@ -41,9 +41,9 @@ const ToUsuario = () => {
         <span className="addProduto-escrito">Adicionar</span>
       </Link>
 
-      <button onClick={logoutUser} className="btn-logout">
+      {/* <button onClick={logoutUser} className="btn-logout">
         <img className="logout-user" src={logoutPng} alt="sair-da-conta" />
-      </button>
+      </button> */}
     </div>
   );
 };

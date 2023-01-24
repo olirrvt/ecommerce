@@ -45,21 +45,35 @@
     margin: 0.5rem 0 0 0;
     padding: 0.5rem;
     width: 4vh;
+    text-decoration: none;
 }
 
-.carrinho-png,
+.carrinho-png, 
 .add-produto-png {
     box-sizing: border-box;
     background-color: #fff;
-    border: 2px solid #fff;
+    border: 8px solid #fff;
     border-radius: 100%;
     width: 5vh;
+    transition: 450ms all ease-in-out;
+}
+
+.carrinho-png {
+    border: 9px solid #fff;
+}
+
+.carrinho-png:hover, 
+.add-produto-png:hover {
+    background-color: #F44336;
+    border: 8px solid #F44336;
+    transition: 450ms all ease-in-out;    
 }
 
 .carrinho-escrito,
 .addProduto-escrito {
     color: #fff;
-    font-size: 7pt;
+    font-size: 9pt;
+    margin: 0.3rem 0 0 0;
 }
 
 .btn-logout {
