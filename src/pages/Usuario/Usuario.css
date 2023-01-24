@@ -28,8 +28,24 @@
     border-bottom-left-radius: 7px;
 }
 
-.perfil span {
+.menu-usuario span {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.item-menu, 
+.delete {
     color: #000;
+}
+
+.item-menu:hover, 
+.delete:hover {
+    color: #525151;
+}
+
+ .logout {
+    color: #f32d0a;
 }
 
 .area-user {
@@ -43,6 +59,8 @@
 .area-user span {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 700;
+    font-size: 12pt;
+    color: #000;
 }
 
 .user-logado {

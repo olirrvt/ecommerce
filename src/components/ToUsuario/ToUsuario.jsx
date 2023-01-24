@@ -4,18 +4,12 @@ import "./ToUsuario.css";
 import userLogado from "../../assets/user.png";
 import carrinhoPng from "../../assets/carrinho-de-compras.png";
 import addProduto from "../../assets/add-produto.png";
-import logoutPng from "../../assets/sair.png";
 // React Router
 import { Link } from "react-router-dom";
 
 const ToUsuario = () => {
 
   const nomeUser = localStorage.getItem("nome");
-
-  const logoutUser = () => {
-    localStorage.clear();
-    window.location.reload(true);
-  };
 
   return (
     <div className="container-usuario">
@@ -40,10 +34,6 @@ const ToUsuario = () => {
         />
         <span className="addProduto-escrito">Adicionar</span>
       </Link>
-
-      {/* <button onClick={logoutUser} className="btn-logout">
-        <img className="logout-user" src={logoutPng} alt="sair-da-conta" />
-      </button> */}
     </div>
   );
 };

@@ -7,9 +7,15 @@ import BackToHome from "../../components/BackToHome/BackToHome";
 
 const Usuario = () => {
 
+  // Nome Usuario
   const userLocal = localStorage.getItem("nome");
-
   const user = localStorage.getItem("nome").charAt(0).toUpperCase() + userLocal.slice(1);
+
+  // Logout 
+  const logoutUser = () => {
+    localStorage.clear();
+    window.location.href="/";
+  };
 
   return (
     <>
@@ -25,15 +31,15 @@ const Usuario = () => {
           <div className="perfil">
             <div className="area-user">
               <img className="user-logado" src={userLogado} alt="imagem-user" />
-              <span>{user}</span>
+              <span className="nome-user">{user}</span>
             </div>
 
             <div className="menu-usuario">
-              <span>Perfil</span>
-              <span>Carrinho</span>
-              <span>Meus produtos</span>
-              <span>Sair da conta</span>
-              <span>Apagar Perfil</span>
+              <span className="item-menu">Perfil</span>
+              <span className="item-menu">Carrinho</span>
+              <span className="item-menu">Meus produtos</span>
+              <span className="delete">Apagar Perfil</span>
+              <span onClick={logoutUser} className="logout">Sair da conta</span>
             </div>
           </div>
 
