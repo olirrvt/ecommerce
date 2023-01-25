@@ -5,9 +5,9 @@ import userLogado from "../../assets/user.png";
 // Components
 import BackToHome from "../../components/BackToHome/BackToHome";
 import { useState } from "react";
+import Footer from "../../components/Footer/Footer";
 // Function
 import editUser from "../../services/editUser";
-import { useEffect } from "react";
 
 const Usuario = () => {
   // Dados Local
@@ -138,6 +138,8 @@ const Usuario = () => {
           </div>
         </div>
       </main>
+
+      <Footer />
     </>
   );
 };
