@@ -5,8 +5,10 @@ import BackToHome from "../../components/BackToHome/BackToHome";
 import Footer from "../../components/Footer/Footer";
 import { useState } from "react";
 import setProduto from "../../services/setProduto";
+import { useEffect } from "react";
 
 const CadastrarProduto = () => {
+
   // Produto
   const [titulo, setTitulo] = useState("");
   const [descricao, setDescricao] = useState("");
@@ -52,7 +54,7 @@ const CadastrarProduto = () => {
             
             { added && (
               <div className="container-mensagem">
-                <span className="msg-produto"> {dados.titulo} adicionado com sucesso!</span>
+                <span className="msg-produto"> Produto adicionado com sucesso!</span>
               </div>
             )}
 

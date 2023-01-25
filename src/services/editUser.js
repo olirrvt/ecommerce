@@ -27,23 +27,24 @@ const editUser = async (nome, email, senha) => {
     const emailUser = email || user[0].email;
     const senhaUser = senha || user[0].senha;
 
+    // Axios
+
     const data = {
-      nomeUser,
-      emailUser,
-      senhaUser,
-    };
+        nome: nomeUser,
+        email: emailUser,
+        senha: senhaUser,
+        userId
+    }
 
-    // Fetch Config
+    const res = await axios.put(url, data);
 
-    const res = await fetch(url, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
+    const userUp = res.data.usuario;
 
-    console.log(res);
+    localStorage.setItem("nome", userUp[0]);
+    localStorage.setItem("email", userUp[1]);
+
+    // location.reload(true);
+
     return res;
 
   } catch(erro) {

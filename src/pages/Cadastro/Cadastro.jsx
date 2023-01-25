@@ -43,6 +43,7 @@ const Cadastro = () => {
 
   const logUser = (resposta) => {
     localStorage.setItem("nome", resposta.usuario.nome);
+    localStorage.setItem("email", resposta.usuario.email);
     localStorage.setItem("logado", resposta.logado);
     setLogado(true);
   };
