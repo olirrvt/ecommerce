@@ -51,6 +51,10 @@ const CardHome = (items) => {
                   {prod.descricao}
                 </div>
                 <div className="valor-prod">R$ {prod.valor} à vista</div>
+                <div className="container-btn">
+                  <button className="comprar-btn">Comprar</button>
+                  <button className="carrinho-btn">Adicionar ao Carrinho</button>
+                </div>
               </div>
             </div>
           ))}

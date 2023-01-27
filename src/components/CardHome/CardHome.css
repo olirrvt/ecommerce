@@ -72,3 +72,42 @@
     font-weight: 800;
     font-size: 15pt;
 }
+
+/* BOTÃO CARD */
+
+.container-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.comprar-btn,
+.carrinho-btn {
+    border: none;
+    padding: 0.3rem;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.comprar-btn {
+    background-color: #FF0000;
+    transition: all 450ms ease-in-out;
+}
+
+.comprar-btn:hover {
+    background-color: #08d83c;
+    transition: all 450ms ease-in-out;
+}
+
+.carrinho-btn {
+    background-color: #df510f;
+    transition: all 450ms ease-in-out;
+}
+
+.carrinho-btn:hover {
+    background-color: #ee7e4a;
+    transition: all 450ms ease-in-out;
+}
+
+/* carrinho-btn */
